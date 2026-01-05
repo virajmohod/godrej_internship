@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/11/2025 11:37:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VIRAJ_MOHOD"
+  DTS:CreatorName="VIRAJ_MOHOD\rvira"
+  DTS:DTSID="{106020C6-92BA-4E00-B576-8CBD6B0C3149}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Analysis_Process_Task"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{87761F6C-926A-48C4-9D04-5EF97718D968}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Viraj_Mohod\FINAL_SSAS_FINAL.Automate_Job]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{34B5BFE7-1E14-45E7-B8C6-C3484D1905E9}"
+      DTS:ObjectName="Viraj_Mohod\FINAL_SSAS_FINAL.Automate_Job">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=Viraj_Mohod\FINAL_SSAS_FINAL;Initial Catalog=Automate_Job;Provider=MSOLAP.8;Integrated Security=SSPI;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VIRAJ_MOHOD\FINAL_SSAS_FINAL.banking_ssasfinal_final]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{6F258D7B-9B00-40D7-89D4-2A75FAE2116B}"
+      DTS:ObjectName="VIRAJ_MOHOD\FINAL_SSAS_FINAL.banking_ssasfinal_final">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=VIRAJ_MOHOD\FINAL_SSAS_FINAL;Initial Catalog=banking_ssasfinal_final;Provider=MSOLAP.8;Integrated Security=SSPI;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Analysis Services Processing Task"
+      DTS:CreationName="Microsoft.DTSProcessingTask"
+      DTS:Description="Analysis Services Processing Task"
+      DTS:DTSID="{5478C434-4DA5-453E-9A9C-90E4F73D1DE3}"
+      DTS:ExecutableType="Microsoft.DTSProcessingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Analysis Services Processing Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASProcessingData
+          ConnectionName="Viraj_Mohod\FINAL_SSAS_FINAL.Automate_Job"
+          ProcessingCommands="{&#xA;  &quot;sequence&quot;: {&#xA;    &quot;operations&quot;: [&#xA;      {&#xA;        &quot;refresh&quot;: {&#xA;          &quot;type&quot;: &quot;full&quot;,&#xA;          &quot;objects&quot;: [&#xA;            {&#xA;              &quot;database&quot;: &quot;Automate_Job&quot;,&#xA;              &quot;table&quot;: &quot;test&quot;,&#xA;              &quot;partition&quot;: &quot;Male_Data&quot;&#xA;            }&#xA;          ]&#xA;        }&#xA;      }&#xA;    ]&#xA;  }&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="237.142857142858,42.2857142857143"
+          Id="Package\Analysis Services Processing Task"
+          TopLeft="261.666661901055,92.6956504323083" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[VIRAJ_MOHOD\FINAL_SSAS_FINAL.banking_ssasfinal_final]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[Viraj_Mohod\FINAL_SSAS_FINAL.Automate_Job]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
